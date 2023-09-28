@@ -30,14 +30,14 @@ jobs:
     - name: Build with Maven
       run: mvn clean verify
 
-  Test:
-    name: Run Dtags="@login"
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Test Page Login
-        run: Mvn clean verify -Dtags="@login"
+  # Test:
+  #   name: Run Dtags="@login"
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Test Page Login
+  #       run: Mvn clean verify -Dtags="@login"
 
  # # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
  #    - name: Update dependency graph
