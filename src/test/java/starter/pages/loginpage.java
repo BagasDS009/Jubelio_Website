@@ -55,36 +55,45 @@ public class loginpage extends PageObject {
     @Step
     public void clickbtnlogin() {
         $(btnlogin()).click();    }
-//    @Step("validate page home")
-//    public void validatePageHome()  {
-//                $(validpagedashbord()).getTextValue();
-//
-//    }
     @Step("validate page home or error {string}")
     public void validatePageHomeOrError(String messagefield) throws Exception {
         switch (messagefield){
             case "Format Email tidak valid.":
                 $(erroemailinvalid()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             case "Password atau email anda salah.":
                 $(errorpassinvalid()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             case "Email dan Password anda salah.":
                 $(erroemailinvalid()).getTextValue();
                 $(erroemailinvalid()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             case "Email dan Password harus diisi.":
                 $(erroremailempty()).getTextValue();
                 $(errorpassempty()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             case "Email harus diisi.":
                 $(erroremailempty()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             case "Password harus diisi.":
                 $(errorpassempty()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             case "Password harus di antara 6 dan 30.":
                 $(errorpassmaxmin()).getTextValue();
+                $(emailField()).clear();
+                $(passField()).clear();
                 break;
             default:
                 $(validpagedashbord()).getTextValue();
