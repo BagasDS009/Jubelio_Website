@@ -12,8 +12,8 @@ public class InventoryStockSteps {
     }
 
     @And("validate the inventory adjustment page")
-    public void validateTheInventoryAdjustmentPage() {
-
+    public void validateTheInventoryAdjustmentPage() throws InterruptedException {
+        Thread.sleep(500);
     }
 
     @When("you select an item")
