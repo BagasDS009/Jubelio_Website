@@ -22,7 +22,7 @@ public class InventoryStockSteps {
     }
 
     @And("fill in quality {string} data, fill in cost price {string}")
-    public void fillInQualityDataFillInCostPrice(String qty, String price3) {
+    public void fillInQualityDataFillInCostPrice(String qty, String price) {
 
     }
 
