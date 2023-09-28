@@ -31,10 +31,10 @@ jobs:
       run: mvn clean verify
 
   Test:
-      name: Run Dtags="@login"
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
+    name: Run Dtags="@login"
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
       - name: Test Page Login
         run: Mvn clean verify -Dtags="@login"
