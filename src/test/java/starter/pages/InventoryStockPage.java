@@ -3,6 +3,10 @@ package starter.pages;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.swing.*;
 
 public class InventoryStockPage extends PageObject {
     private By teksPersediaan() {
@@ -15,27 +19,37 @@ public class InventoryStockPage extends PageObject {
         return By.xpath("//*[@class=\"ladda-button btn btn-primary m-l-xs\"]");
     }
     private By pilihBarang() {
-        return By.className("//*[@class=\"text-muted\"]");
+        return By.xpath("//*[text() = 'Harap pilih']");
     }
     private By clickBarang() {
-        return By.id("//*[@data-item-id=\"289\"]");
+        return By.xpath("//*[@data-item-id=\"289\"]");
     }
     private By qtyFiled() {
-        return By.className("//*[@class=\"react-grid-Cell\"][2]/div");
+        return By.xpath("//*[@class=\"react-grid-Cell\"][2]");
     }
     private By hrgFiled() {
-        return By.className("//*[@class=\"react-grid-Cell\"][3]/div");
+        return By.xpath("//*[@class=\"react-grid-Cell\"][3]");
     }
     private By keteranganFiled() {
-        return By.className("//*[@class=\"react-grid-Cell\"][6]/div");
+        return By.xpath("//*[@class=\"react-grid-Cell\"][6]/div");
     }
     private By buttonSimpan() {
         return By.xpath("//*[text() = 'Simpan']");
+    }
+    private By search() {
+        return By.xpath("//*[@class=\"form-control\"]");
+    }
+    private By teksBarang() {
+        return By.xpath("//*[text() = 'Naruto']");
     }
     private By errorTeks() {
         return By.xpath("//*[text() = 'Minimal harus ada 1 barang']");
     }
 
+    @Step
+    public void openUrlInventory() {
+        openAt("/home/inventory");
+    }
     @Step
     public void validatePagePersedian() {
         $(teksPersediaan()).getTextValue();
@@ -48,10 +62,15 @@ public class InventoryStockPage extends PageObject {
     public void btnPenyesuaianPersedian() {
         $(buttonPenyesuaianPersediaan()).click();
     }
+
+
     @Step
     public void btnPilihBarang() {
-        $(pilihBarang()).click();
+        WebElement element = $(pilihBarang()).waitUntilVisible();
+        Actions actions = new Actions(getDriver());
+        actions.doubleClick(element).perform();
     }
+
     @Step
     public void btnBarang() {
         $(clickBarang()).click();
@@ -71,6 +90,18 @@ public class InventoryStockPage extends PageObject {
     @Step
     public void btnSimpan() {
         $(buttonSimpan()).click();
+    }
+    @Step
+    public void fieldSearch(String pencarian) {
+        $(search()).sendKeys(pencarian);
+    }
+    @Step
+    public void btnSearch() {
+        $(search()).click();
+    }
+    @Step
+    public void validateTeksBarang() {
+        $(teksBarang()).getTextValue();
     }
     @Step
     public void notifikasiError() {

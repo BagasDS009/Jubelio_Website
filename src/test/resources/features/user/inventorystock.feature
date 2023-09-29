@@ -11,5 +11,5 @@ Feature: Inventory Stock at app.jubelio
 
 
     Examples:
-      | qty | price | name | email                        | pass        |
-      |     |       |      | qa.rakamin.jubelio@gmail.com | Jubelio123! |
+      | qty | price | name   | email                        | pass        |
+      | 12  | 3000  | Naruto | qa.rakamin.jubelio@gmail.com | Jubelio123! |

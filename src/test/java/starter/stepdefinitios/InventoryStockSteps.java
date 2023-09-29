@@ -22,6 +22,9 @@ public class InventoryStockSteps {
         Loginpage.inputPassLogin(pass);
         Thread.sleep(150);
         Loginpage.clickbtnlogin();
+        Thread.sleep(1500);
+        inventoryStockPage.openUrlInventory();
+        Thread.sleep(150);
     }
     @And("an inventory adjustment button click")
     public void fillsInTheWithValidDataEmail() throws InterruptedException {
@@ -50,10 +53,18 @@ public class InventoryStockSteps {
         inventoryStockPage.filedQtyPersedian(qty);
         Thread.sleep(150);
         inventoryStockPage.filedHrgPersedian(price);
+        inventoryStockPage.btnSimpan();
     }
 
     @Then("validate the name {string} successfully")
-    public void validateTheNameSuccessfully(String name) {
+    public void validateTheNameSuccessfully(String name) throws InterruptedException {
+        Thread.sleep(150);
+        inventoryStockPage.validatePagePersedian();
+        Thread.sleep(150);
+        inventoryStockPage.fieldSearch(name);
+        inventoryStockPage.btnSearch();
+        Thread.sleep(150);
+        inventoryStockPage.validateTeksBarang();
 
     }
 }
