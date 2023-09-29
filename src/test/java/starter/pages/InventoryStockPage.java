@@ -18,6 +18,18 @@ public class InventoryStockPage extends PageObject {
     private By buttonPenyesuaianPersediaan() {
         return By.xpath("//*[@class=\"ladda-button btn btn-primary m-l-xs\"]");
     }
+    private By clickLokasi() {
+        return By.xpath("//*[@class=\"selectivity-single-select\"]");
+    }
+    private By clickGudangPedia() {
+        return By.xpath("//*[@data-item-id=\"3\"]");
+    }
+    private By clickPusat() {
+        return By.xpath("//*[@data-item-id=\"-1\"]");
+    }
+    private By clickSimatupangGarden() {
+        return By.xpath("//*[@data-item-id=\"1\"]");
+    }
     private By pilihBarang() {
         return By.xpath("//*[text() = 'Harap pilih']");
     }
@@ -25,19 +37,22 @@ public class InventoryStockPage extends PageObject {
         return By.xpath("//*[@data-item-id=\"289\"]");
     }
     private By qtyFiled() {
-        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[2]");
+        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[2]/div");
     }
     private By hrgFiled() {
-        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[6]");
+        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[6]/div");
     }
     private By keteranganFiled() {
-        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[9]");
+        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[9]/div");
     }
     private By buttonSimpan() {
         return By.xpath("//*[text() = 'Simpan']");
     }
     private By search() {
         return By.xpath("//*[@class=\"form-control\"]");
+    }
+    private By clickSearch() {
+        return By.xpath("//*[@class=\"btn btn-primary\"]");
     }
     private By teksBarang() {
         return By.xpath("//*[text() = 'Naruto']");
@@ -62,15 +77,32 @@ public class InventoryStockPage extends PageObject {
     public void btnPenyesuaianPersedian() {
         $(buttonPenyesuaianPersediaan()).click();
     }
-
-
+    @Step
+    public void btnLokasi() {
+        $(clickLokasi()).click();
+    }
+    @Step
+    public void btnVarisi(String lokasi) {
+        switch (lokasi) {
+            case "Pusat":
+                $(clickPusat()).click();
+                break;
+            case "Gudang Pedia":
+                $(clickGudangPedia()).click();
+                break;
+            case "Simatupang Garden":
+                $(clickSimatupangGarden()).click();
+                break;
+            default:
+                $(clickPusat()).click();
+        }
+    }
     @Step
     public void btnPilihBarang() {
         WebElement pilihBarang = $(pilihBarang()).waitUntilVisible();
         Actions actions = new Actions(getDriver());
         actions.doubleClick(pilihBarang).perform();
     }
-
     @Step
     public void btnBarang() {
         WebElement barang = $(clickBarang()).waitUntilVisible();
@@ -80,6 +112,7 @@ public class InventoryStockPage extends PageObject {
     @Step
     public void filedQtyPersedian(String qty) {
         $(qtyFiled()).sendKeys(qty);
+
     }
     @Step
     public void filedHrgPersedian(String hrg) {
@@ -107,7 +140,7 @@ public class InventoryStockPage extends PageObject {
     }
     @Step
     public void btnSearch() {
-        $(search()).click();
+        $(clickSearch()).click();
     }
     @Step
     public void validateTeksBarang() {

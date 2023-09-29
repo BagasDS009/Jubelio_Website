@@ -13,7 +13,7 @@ public class InventoryStockSteps {
     loginpage  Loginpage;
     @Steps
     InventoryStockPage inventoryStockPage;
-    @And("Login {string}, {string}, click button login")
+    @Given("Login {string}, {string}, click button login")
     public void loginClickButtonLogin(String email, String pass) throws InterruptedException {
         Thread.sleep(150);
         Loginpage.openLink();
@@ -45,17 +45,7 @@ public class InventoryStockSteps {
         inventoryStockPage.btnPilihBarang();
         Thread.sleep(500);
         inventoryStockPage.btnBarang();
-    }
-
-    @And("fill in quality {string} data, fill in cost price {string}")
-    public void fillInQualityDataFillInCostPrice(String qty, String price) throws InterruptedException {
-        Thread.sleep(200);
-        inventoryStockPage.btnQty();
-        inventoryStockPage.filedQtyPersedian(qty);
-        Thread.sleep(200);
-        inventoryStockPage.btnHrg();
-        inventoryStockPage.filedHrgPersedian(price);
-        Thread.sleep(200);
+        Thread.sleep(500);
         inventoryStockPage.btnSimpan();
     }
 
@@ -69,5 +59,13 @@ public class InventoryStockSteps {
         Thread.sleep(150);
         inventoryStockPage.validateTeksBarang();
 
+    }
+
+    @And("click {string}")
+    public void click(String lokasi) throws InterruptedException {
+      Thread.sleep(150);
+      inventoryStockPage.btnLokasi();
+      Thread.sleep(150);
+      inventoryStockPage.btnVarisi(lokasi);
     }
 }

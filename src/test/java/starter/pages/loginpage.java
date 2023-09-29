@@ -56,7 +56,7 @@ public class loginpage extends PageObject {
     public void clickbtnlogin() {
         $(btnlogin()).click();    }
     @Step("validate page home or error {string}")
-    public void validatePageHomeOrError(String messagefield) throws Exception {
+    public void validatePageHomeOrError(String messagefield) {
         switch (messagefield){
             case "Format Email tidak valid.":
                 $(erroemailinvalid()).getTextValue();
