@@ -43,16 +43,19 @@ public class InventoryStockSteps {
     @When("you select an item")
     public void youSelectAnItem() throws InterruptedException {
         inventoryStockPage.btnPilihBarang();
-        Thread.sleep(150);
+        Thread.sleep(500);
         inventoryStockPage.btnBarang();
     }
 
     @And("fill in quality {string} data, fill in cost price {string}")
     public void fillInQualityDataFillInCostPrice(String qty, String price) throws InterruptedException {
-        Thread.sleep(150);
+        Thread.sleep(200);
+        inventoryStockPage.btnQty();
         inventoryStockPage.filedQtyPersedian(qty);
-        Thread.sleep(150);
+        Thread.sleep(200);
+        inventoryStockPage.btnHrg();
         inventoryStockPage.filedHrgPersedian(price);
+        Thread.sleep(200);
         inventoryStockPage.btnSimpan();
     }
 

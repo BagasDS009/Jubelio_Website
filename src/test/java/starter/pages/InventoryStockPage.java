@@ -25,13 +25,13 @@ public class InventoryStockPage extends PageObject {
         return By.xpath("//*[@data-item-id=\"289\"]");
     }
     private By qtyFiled() {
-        return By.xpath("//*[@class=\"react-grid-Cell\"][2]");
+        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[2]");
     }
     private By hrgFiled() {
-        return By.xpath("//*[@class=\"react-grid-Cell\"][3]");
+        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[6]");
     }
     private By keteranganFiled() {
-        return By.xpath("//*[@class=\"react-grid-Cell\"][6]/div");
+        return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[9]");
     }
     private By buttonSimpan() {
         return By.xpath("//*[text() = 'Simpan']");
@@ -66,14 +66,16 @@ public class InventoryStockPage extends PageObject {
 
     @Step
     public void btnPilihBarang() {
-        WebElement element = $(pilihBarang()).waitUntilVisible();
+        WebElement pilihBarang = $(pilihBarang()).waitUntilVisible();
         Actions actions = new Actions(getDriver());
-        actions.doubleClick(element).perform();
+        actions.doubleClick(pilihBarang).perform();
     }
 
     @Step
     public void btnBarang() {
-        $(clickBarang()).click();
+        WebElement barang = $(clickBarang()).waitUntilVisible();
+        Actions actions = new Actions(getDriver());
+        actions.doubleClick(barang).perform();
     }
     @Step
     public void filedQtyPersedian(String qty) {
@@ -90,6 +92,14 @@ public class InventoryStockPage extends PageObject {
     @Step
     public void btnSimpan() {
         $(buttonSimpan()).click();
+    }
+    @Step
+    public void btnQty() {
+        $(qtyFiled()).click();
+    }
+    @Step
+    public void btnHrg() {
+        $(hrgFiled()).click();
     }
     @Step
     public void fieldSearch(String pencarian) {
