@@ -5,11 +5,14 @@ import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 
 public class InventoryStockPage extends PageObject {
-    private By validatePersediaan() {
+    private By teksPersediaan() {
         return By.xpath("//*[text() = 'Persediaan']");
     }
+    private By teksPenyesuaianPersediaan() {
+        return By.xpath("//*[text() = 'Penyesuaian Persediaan']");
+    }
     private By buttonPenyesuaianPersediaan() {
-        return By.className("//*[@class=\"ladda-button btn btn-primary m-l-xs\"]");
+        return By.xpath("//*[@class=\"ladda-button btn btn-primary m-l-xs\"]");
     }
     private By pilihBarang() {
         return By.className("//*[@class=\"text-muted\"]");
@@ -34,12 +37,12 @@ public class InventoryStockPage extends PageObject {
     }
 
     @Step
-    public void openLinkInventory() {
-        openAt("/home/inventory");
+    public void validatePagePersedian() {
+        $(teksPersediaan()).getTextValue();
     }
     @Step
-    public void validatePagePersedian() {
-        $(validatePersediaan()).getTextValue();
+    public void validatePenyesuaianPersediaa() {
+        $(teksPenyesuaianPersediaan()).getTextValue();
     }
     @Step
     public void btnPenyesuaianPersedian() {
