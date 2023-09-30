@@ -1,0 +1,5 @@
+CucumberTestSuite.class
+starter\pages\loginpage.class
+starter\stepdefinitios\LoginSteps.class
+starter\pages\InventoryStockPage.class
+starter\stepdefinitios\InventoryStockSteps.class
