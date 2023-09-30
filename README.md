@@ -8,11 +8,18 @@ Automation testing with bdd cucumber on website jubelio
 
 ## Test Automation 
 #### Open download folder
-#### extract file
+#### extract file Jubelio_Website
 #### Open vsc
 #### Open terminal 
 #### Run test with Commands *mvn clean verify*
 
+# See History Testing
+## After extract file Jubelio_Website
+#### open folder 'target'
+#### next open folder 'site' 
+#### open folder serenity
+## search file index.html and open with browser
+# Or copy this part 'Jubelio-Website/target/site/serenity/index.html'
 
 # Tools
 ### java language
