@@ -36,6 +36,19 @@ public class InventoryStockPage extends PageObject {
     private By clickBarang() {
         return By.xpath("//*[@data-item-id=\"289\"]");
     }
+    private By clickCheckBox() {
+        return By.xpath("//*[@for=\"checkbox0\"]");
+    }
+    private By clickDelete() {
+        return By.xpath("//*[@id=\"x-delete-button\"]");
+    }
+    private By clickDeleteYes() {
+        return By.xpath("//*[@id=\"x-delete-button-confirm \"]");
+    }
+    private By clickDeleteBatal() {
+        return By.xpath("//*[@id=\"x-delete-button-cancel\"]");
+    }
+
     private By qtyFiled() {
         return By.xpath("//*[@class=\"react-grid-Canvas\"]/div[2]/div/div/div[2]/div");
     }
@@ -84,10 +97,7 @@ public class InventoryStockPage extends PageObject {
     @Step
     public void btnVarisi(String lokasi) {
         switch (lokasi) {
-            case "Pusat":
-                $(clickPusat()).click();
-                break;
-            case "Gudang Pedia":
+             case "Gudang Pedia":
                 $(clickGudangPedia()).click();
                 break;
             case "Simatupang Garden":
@@ -95,6 +105,7 @@ public class InventoryStockPage extends PageObject {
                 break;
             default:
                 $(clickPusat()).click();
+                break;
         }
     }
     @Step
@@ -131,9 +142,27 @@ public class InventoryStockPage extends PageObject {
         $(qtyFiled()).click();
     }
     @Step
+    public void btnCheckbox() {
+        $(clickCheckBox()).click();
+    }
+    @Step
+    public void btnDelete(String delete) {
+        switch (delete){
+            case "Batal":
+                $(clickDelete()).click();
+                $(clickDeleteBatal()).click();
+            break;
+            default:
+                $(clickDelete()).click();
+                $(clickDeleteYes()).click();
+            break;
+        }
+    }
+    @Step
     public void btnHrg() {
         $(hrgFiled()).click();
     }
+
     @Step
     public void fieldSearch(String pencarian) {
         $(search()).sendKeys(pencarian);
@@ -145,6 +174,10 @@ public class InventoryStockPage extends PageObject {
     @Step
     public void validateTeksBarang() {
         $(teksBarang()).getTextValue();
+    }
+    @Step
+    public void validatePilihBarang() {
+        $(pilihBarang()).getTextValue();
     }
     @Step
     public void notifikasiError() {

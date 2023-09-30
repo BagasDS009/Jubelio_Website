@@ -68,4 +68,21 @@ public class InventoryStockSteps {
       Thread.sleep(150);
       inventoryStockPage.btnVarisi(lokasi);
     }
+
+    @And("you detele item {string}")
+    public void youDeteleItem(String delete) throws InterruptedException {
+        inventoryStockPage.btnPilihBarang();
+        Thread.sleep(150);
+        inventoryStockPage.btnBarang();
+        Thread.sleep(150);
+        inventoryStockPage.btnCheckbox();
+        Thread.sleep(150);
+        inventoryStockPage.btnDelete(delete);
+
+    }
+
+    @Then("validate the name empty")
+    public void validateTheNameEmpty() {
+        inventoryStockPage.validatePilihBarang();
+    }
 }
