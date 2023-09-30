@@ -29,3 +29,4 @@ Feature: Inventory Stock at app.jubelio
       |  | email                        | pass        | lokasi | delete |
       |  | qa.rakamin.jubelio@gmail.com | Jubelio123! | Pusat  | Ya     |
       |  | qa.rakamin.jubelio@gmail.com | Jubelio123! | Pusat  | Batal  |
+      |  | qa.rakamin.jubelio@gmail.com | Jubelio123! | Pusat  | Close  |

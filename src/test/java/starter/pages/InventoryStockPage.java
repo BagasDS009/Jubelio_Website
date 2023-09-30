@@ -39,11 +39,14 @@ public class InventoryStockPage extends PageObject {
     private By clickCheckBox() {
         return By.xpath("//*[@for=\"checkbox0\"]");
     }
+    private By clickCloseDelete() {
+        return By.xpath("//*[@class=\"close\"]");
+    }
     private By clickDelete() {
         return By.xpath("//*[@id=\"x-delete-button\"]");
     }
     private By clickDeleteYes() {
-        return By.xpath("//*[@id=\"x-delete-button-confirm \"]");
+        return By.xpath("//*[@id=\"x-delete-button-confirm\"]");
     }
     private By clickDeleteBatal() {
         return By.xpath("//*[@id=\"x-delete-button-cancel\"]");
@@ -148,6 +151,10 @@ public class InventoryStockPage extends PageObject {
     @Step
     public void btnDelete(String delete) {
         switch (delete){
+            case "Close":
+                $(clickDelete()).click();
+                $(clickCloseDelete()).click();
+                break;
             case "Batal":
                 $(clickDelete()).click();
                 $(clickDeleteBatal()).click();
