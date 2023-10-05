@@ -3,7 +3,9 @@ package starter.pages;
 import jdk.internal.access.JavaIOFileDescriptorAccess;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class loginpage extends PageObject {
     private By emailField(){
@@ -59,12 +61,19 @@ public class loginpage extends PageObject {
     public void validatePageHomeOrError(String messagefield) {
         switch (messagefield){
             case "Format Email tidak valid.":
-                $(erroemailinvalid()).getTextValue();
-                $(emailField()).clear();
-                $(passField()).clear();
+
+                WebElement element = $(erroemailinvalid());
+                String expectedText = "Format Email tidak valid.";
+                String actualText = element.getText();
+                Assert.assertEquals(actualText, expectedText);
+
+//                $(erroemailinvalid()).getTextValue();
+//                $(emailField()).clear();
+//                $(passField()).clear();
                 break;
             case "Password atau email anda salah.":
                 $(errorpassinvalid()).getTextValue();
+                Assert.assertEquals($(errorpassinvalid()), (messagefield));
                 $(emailField()).clear();
                 $(passField()).clear();
                 break;

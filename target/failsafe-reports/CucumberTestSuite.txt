@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 194.189 s - in CucumberTestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.795 s <<< FAILURE! - in CucumberTestSuite
+Login Account at app.jubelio.Login Account  Time elapsed: 14.26 s  <<< FAILURE!
+org.junit.ComparisonFailure: Format Email tidak valid. expected:<Format Email tidak[ valid].> but was:<Format Email tidak[].>
+
