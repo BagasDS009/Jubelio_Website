@@ -17,12 +17,10 @@ public class InventoryStockSteps {
     public void loginClickButtonLogin(String email, String pass) throws InterruptedException {
         Thread.sleep(150);
         Loginpage.openLink();
-        Thread.sleep(150);
         Loginpage.inputEmailLogin(email);
         Loginpage.inputPassLogin(pass);
-        Thread.sleep(150);
         Loginpage.clickbtnlogin();
-        Thread.sleep(1500);
+        Thread.sleep(3000);
         inventoryStockPage.openUrlInventory();
         Thread.sleep(150);
     }
@@ -57,7 +55,7 @@ public class InventoryStockSteps {
         inventoryStockPage.fieldSearch(name);
         inventoryStockPage.btnSearch();
         Thread.sleep(150);
-        inventoryStockPage.validateTeksBarang();
+        inventoryStockPage.validateTeksBarang(name);
 
     }
 

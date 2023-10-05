@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login Account at app.jubelio" skipped="0" tests="1" time="13.91" timestamp="2023-10-05 08:22:41"><testcase name="Login Account"><failure message="Format Email tidak valid. expected:&lt;Format Email tidak[ valid].&gt; but was:&lt;Format Email tidak[].&gt;" type="java.lang.AssertionError">Format Email tidak valid. expected:&lt;Format Email tidak[ valid].&gt; but was:&lt;Format Email tidak[].&gt;</failure><system-err>Format Email tidak valid. expected:&lt;Format Email tidak[ valid].&gt; but was:&lt;Format Email tidak[].&gt;&#13;
-Website.New@1.0-SNAPSHOT/starter.pages.loginpage.validatePageHomeOrError(loginpage.java:68)&#13;
-Website.New@1.0-SNAPSHOT/starter.stepdefinitios.LoginSteps.validatePageHomeOrError(LoginSteps.java:37)&#13;
-✽.validate page home or error "Format Email tidak valid."(file:///D:/QE/Automation/Jubelio-Website/src/test/resources/features/user/login.feature:8)&#13;
-</system-err></testcase></testsuite>

@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4dac6b960b8af93a850a1c7f5cdb70afac5eaa1241803d145b517970a2a8ab01.html">Inventory Stock At App.Jubelio</a></span>
+                > <span class="truncate-60"><a
+                    href="b014532e8f14f310a1f13076cd52c18d1a32485a8af0b95ee0743ea59048013a.html">Inventory Stock </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-10-2023 21:51</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Inventory Stock At App.Jubelio </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="294ac738bbfee2089af917bcf7aec3a8dc6381a1e9ce0cdb6a6286df2ce077c2.html">Inventory
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="7274310a66a170bc28a6efa142c6aa1791e9ddca1f64255e985892c9a0f1cdc2.html">Inventory Stock
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Inventory Stock
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Login "&lt;email&gt;", "&lt;pass&gt;", click button login<br>And an inventory adjustment button click<br>And validate the inventory adjustment page<br>And click "&lt;lokasi&gt;"<br>When you select an item<br>Then validate the name "&lt;name&gt;" successfully</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" 1: Inventory Stock ({name=Naruto, email=qa.rakamin.jubelio@gmail.com, pass=Jubelio123!, lokasi=Pusat})" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" Given Login &quot;qa.rakamin.jubelio@gmail.com&quot;, &quot;Jubelio123!&quot;, click button login" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" Open link" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="23bc95ec95eb6b713773ed558dca6094d30d31a032e127606d0a497b957f9672.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="23bc95ec95eb6b713773ed558dca6094d30d31a032e127606d0a497b957f9672.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="2ddaa4e4a373bd8061bbee8d32e14da5d9de3685dff529125b0819d3746d2814.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="32028730d6617cbaf4be8a3a222b15af4c3642cbbbed6c786edb05d6cdf1a6ef.png" title=" Open url inventory" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Open url inventory (completed)" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Given Login &quot;qa.rakamin.jubelio@gmail.com&quot;, &quot;Jubelio123!&quot;, click button login (completed)" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" And an inventory adjustment button click" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Validate page persedian" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Validate page persedian (completed)" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Btn penyesuaian persedian" width="1034"/>
+                <img src="368259e0fc038cf6f6099d8f5cb328b922c292bd1182d5c0f2b8483cc3c3a3e2.png" title=" Btn penyesuaian persedian (completed)" width="1034"/>
+                <img src="368259e0fc038cf6f6099d8f5cb328b922c292bd1182d5c0f2b8483cc3c3a3e2.png" title=" And an inventory adjustment button click (completed)" width="1034"/>
+                <img src="368259e0fc038cf6f6099d8f5cb328b922c292bd1182d5c0f2b8483cc3c3a3e2.png" title=" And validate the inventory adjustment page" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Validate penyesuaian persediaa" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Validate penyesuaian persediaa (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And validate the inventory adjustment page (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And click &quot;Pusat&quot;" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Btn lokasi" width="1034"/>
+                <img src="ffb9bfd3daa1394b62066e0e542acd4926d5448f4d8383464000c7cf23161974.png" title=" Btn lokasi (completed)" width="1034"/>
+                <img src="ffb9bfd3daa1394b62066e0e542acd4926d5448f4d8383464000c7cf23161974.png" title=" Btn varisi: Pusat" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Btn varisi: Pusat (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And click &quot;Pusat&quot; (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" When you select an item" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Btn pilih barang" width="1034"/>
+                <img src="89f155c34cc2d84972784f9f9d9a4f4a4d417e1eb586cfb2775905cc8c901374.png" title=" Btn pilih barang (completed)" width="1034"/>
+                <img src="9311a53bc487a0fc8bc45603cf1ae1d791425fc180db490005060165b955c6fd.png" title=" Btn barang" width="1034"/>
+                <img src="a29fcb44bdf7fdd010bc24c447a0acb0037f74cd834746630567b1fd1575d9a3.png" title=" Btn barang (completed)" width="1034"/>
+                <img src="a29fcb44bdf7fdd010bc24c447a0acb0037f74cd834746630567b1fd1575d9a3.png" title=" Btn simpan" width="1034"/>
+                <img src="df05e8dbff0241032014f9ea85e5bdbd880d6a1d646f7b529f6c60ae9e2b2f08.png" title=" Btn simpan (completed)" width="1034"/>
+                <img src="df05e8dbff0241032014f9ea85e5bdbd880d6a1d646f7b529f6c60ae9e2b2f08.png" title=" When you select an item (completed)" width="1034"/>
+                <img src="df05e8dbff0241032014f9ea85e5bdbd880d6a1d646f7b529f6c60ae9e2b2f08.png" title=" Then validate the name &quot;Naruto&quot; successfully" width="1034"/>
+                <img src="5ccf8e2e898daddd886af56f622260eb6a29854ce27cead540620f1cabd8f4db.png" title=" Validate page persedian" width="1034"/>
+                <img src="3f32a4988384aa9e019d322915bc820e8b45b495b28b9600300e26d6f4077142.png" title=" Validate page persedian (completed)" width="1034"/>
+                <img src="3f32a4988384aa9e019d322915bc820e8b45b495b28b9600300e26d6f4077142.png" title=" Field search: Naruto" width="1034"/>
+                <img src="e3141d4869afc4a291fe8f5c065a59fba9217d6312ccc118a22aabee0d75ee61.png" title=" Field search: Naruto (completed)" width="1034"/>
+                <img src="e3141d4869afc4a291fe8f5c065a59fba9217d6312ccc118a22aabee0d75ee61.png" title=" Btn search" width="1034"/>
+                <img src="c010adaf590017f39be661bb9eb45b670333808c5bce496609fd7d0732ca0d46.png" title=" Btn search (completed)" width="1034"/>
+                <img src="e6b0ed0b558772b92b64170f7e3a4d625b0397fb19d0a257add64b0890c46ed8.png" title=" Validate teks barang: Naruto" width="1034"/>
+                <img src="e6b0ed0b558772b92b64170f7e3a4d625b0397fb19d0a257add64b0890c46ed8.png" title=" Validate teks barang: Naruto (completed)" width="1034"/>
+                <img src="e6b0ed0b558772b92b64170f7e3a4d625b0397fb19d0a257add64b0890c46ed8.png" title=" Then validate the name &quot;Naruto&quot; successfully (completed)" width="1034"/>
+                <img src="e6b0ed0b558772b92b64170f7e3a4d625b0397fb19d0a257add64b0890c46ed8.png" title=" 1: Inventory Stock ({name=Naruto, email=qa.rakamin.jubelio@gmail.com, pass=Jubelio123!, lokasi=Pusat}) (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" 2: Inventory Stock ({name=Naruto, email=qa.rakamin.jubelio@gmail.com, pass=Jubelio123!, lokasi=Simatupang Garden})" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Given Login &quot;qa.rakamin.jubelio@gmail.com&quot;, &quot;Jubelio123!&quot;, click button login" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Open link" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="02cb3251a2c30973c12b10e8084828a02f3abc0c297b24f7b7c3631066f5dea2.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="02cb3251a2c30973c12b10e8084828a02f3abc0c297b24f7b7c3631066f5dea2.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="b763d8a2b1d63fe753c9ef573b666a29db55465a16c3209b28580de1cbd519c3.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="b763d8a2b1d63fe753c9ef573b666a29db55465a16c3209b28580de1cbd519c3.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="b538f18f2212b501a99eaaad7c445d3306e9968af1a3d5bd1484b458944d37bd.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="b8d3ef7ec779dd28da6f11e1351d06d7dc2322c4fb526b00eeef9930f627e102.png" title=" Open url inventory" width="1034"/>
+                <img src="2b69418b0ccf70f1030fe3e448201316c7e310ceaff5fd1731d3ac8926f3aec9.png" title=" Open url inventory (completed)" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Given Login &quot;qa.rakamin.jubelio@gmail.com&quot;, &quot;Jubelio123!&quot;, click button login (completed)" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" And an inventory adjustment button click" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Validate page persedian" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Validate page persedian (completed)" width="1034"/>
+                <img src="623e9f25d7f0ed55cf1a44f8bbaa69acef445b8d92692c27a2371c7b87858e66.png" title=" Btn penyesuaian persedian" width="1034"/>
+                <img src="aba68fb9357206b0f06ff289c789c64d6b37411b6535d72b9d1137b59730818f.png" title=" Btn penyesuaian persedian (completed)" width="1034"/>
+                <img src="aba68fb9357206b0f06ff289c789c64d6b37411b6535d72b9d1137b59730818f.png" title=" And an inventory adjustment button click (completed)" width="1034"/>
+                <img src="aba68fb9357206b0f06ff289c789c64d6b37411b6535d72b9d1137b59730818f.png" title=" And validate the inventory adjustment page" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Validate penyesuaian persediaa" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Validate penyesuaian persediaa (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And validate the inventory adjustment page (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And click &quot;Simatupang Garden&quot;" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Btn lokasi" width="1034"/>
+                <img src="ffb9bfd3daa1394b62066e0e542acd4926d5448f4d8383464000c7cf23161974.png" title=" Btn lokasi (completed)" width="1034"/>
+                <img src="ffb9bfd3daa1394b62066e0e542acd4926d5448f4d8383464000c7cf23161974.png" title=" Btn varisi: Simatupang Garden" width="1034"/>
+                <img src="f8c16cd68fef1cd150c0ca4bf5e5a8b91c84d5640c9c32770375f2e0ea7ff215.png" title=" Btn varisi: Simatupang Garden (completed)" width="1034"/>
+                <img src="f8c16cd68fef1cd150c0ca4bf5e5a8b91c84d5640c9c32770375f2e0ea7ff215.png" title=" And click &quot;Simatupang Garden&quot; (completed)" width="1034"/>
+                <img src="f8c16cd68fef1cd150c0ca4bf5e5a8b91c84d5640c9c32770375f2e0ea7ff215.png" title=" When you select an item" width="1034"/>
+                <img src="f8c16cd68fef1cd150c0ca4bf5e5a8b91c84d5640c9c32770375f2e0ea7ff215.png" title=" Btn pilih barang" width="1034"/>
+                <img src="c06d50c2a7124e082ec9a050e6db23971cd55ed4c08be4733969455272420b46.png" title=" Btn pilih barang (completed)" width="1034"/>
+                <img src="c8488798a902a6a8c16700e96ddcf1d94b7e68b673f1c0340bf9982568a353c0.png" title=" Btn barang" width="1034"/>
+                <img src="01af49eba0df5d95af1e45b5b06a10a24e7ffeaf934e841d6edcd4ef9c5ba766.png" title=" Btn barang (completed)" width="1034"/>
+                <img src="01af49eba0df5d95af1e45b5b06a10a24e7ffeaf934e841d6edcd4ef9c5ba766.png" title=" Btn simpan" width="1034"/>
+                <img src="c6b41d75631ace0a9bc0cc5b74bc60f7950a72aa0468ed2cc965d49c61ee9de8.png" title=" Btn simpan (completed)" width="1034"/>
+                <img src="c6b41d75631ace0a9bc0cc5b74bc60f7950a72aa0468ed2cc965d49c61ee9de8.png" title=" When you select an item (completed)" width="1034"/>
+                <img src="c6b41d75631ace0a9bc0cc5b74bc60f7950a72aa0468ed2cc965d49c61ee9de8.png" title=" Then validate the name &quot;Naruto&quot; successfully" width="1034"/>
+                <img src="d67fb217ad966a0a7045b44603dd32ef6a4f2ed34950a252c3309e6e36741bed.png" title=" Validate page persedian" width="1034"/>
+                <img src="3f32a4988384aa9e019d322915bc820e8b45b495b28b9600300e26d6f4077142.png" title=" Validate page persedian (completed)" width="1034"/>
+                <img src="3f32a4988384aa9e019d322915bc820e8b45b495b28b9600300e26d6f4077142.png" title=" Field search: Naruto" width="1034"/>
+                <img src="9e2c7f20a15e59881756d8737fe1c8fc2f2affdd9e0034c3f5290c16828805b3.png" title=" Field search: Naruto (completed)" width="1034"/>
+                <img src="9e2c7f20a15e59881756d8737fe1c8fc2f2affdd9e0034c3f5290c16828805b3.png" title=" Btn search" width="1034"/>
+                <img src="c010adaf590017f39be661bb9eb45b670333808c5bce496609fd7d0732ca0d46.png" title=" Btn search (completed)" width="1034"/>
+                <img src="35bb07dccd8fc5580abd3d3230b82f1f027db43ead997c6a8c97482b2b764161.png" title=" Validate teks barang: Naruto" width="1034"/>
+                <img src="35bb07dccd8fc5580abd3d3230b82f1f027db43ead997c6a8c97482b2b764161.png" title=" Validate teks barang: Naruto (completed)" width="1034"/>
+                <img src="35bb07dccd8fc5580abd3d3230b82f1f027db43ead997c6a8c97482b2b764161.png" title=" Then validate the name &quot;Naruto&quot; successfully (completed)" width="1034"/>
+                <img src="35bb07dccd8fc5580abd3d3230b82f1f027db43ead997c6a8c97482b2b764161.png" title=" 2: Inventory Stock ({name=Naruto, email=qa.rakamin.jubelio@gmail.com, pass=Jubelio123!, lokasi=Simatupang Garden}) (completed)" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" 3: Inventory Stock ({name=Naruto, email=qa.rakamin.jubelio@gmail.com, pass=Jubelio123!, lokasi=Gudang Pedia})" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" Given Login &quot;qa.rakamin.jubelio@gmail.com&quot;, &quot;Jubelio123!&quot;, click button login" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" Open link" width="1034"/>
+                <img src="f05427e2f53ac8e85f85f1bbc481385d3d272bf91780dd0e2b264eefbb918de2.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="c329e2aa7acc6bebec8dee02e691eabfa411f3a2074f31626b773d6636c0da8b.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="c329e2aa7acc6bebec8dee02e691eabfa411f3a2074f31626b773d6636c0da8b.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="b38b2a9940897e98c5a9dbe079f6924045d6e4a81a37daa3895a629905ace04b.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="32028730d6617cbaf4be8a3a222b15af4c3642cbbbed6c786edb05d6cdf1a6ef.png" title=" Open url inventory" width="1034"/>
+                <img src="18aa7301e064ab35ef8feb111167731249a63d3cf986334d702b2be7e613fb46.png" title=" Open url inventory (completed)" width="1034"/>
+                <img src="18aa7301e064ab35ef8feb111167731249a63d3cf986334d702b2be7e613fb46.png" title=" Given Login &quot;qa.rakamin.jubelio@gmail.com&quot;, &quot;Jubelio123!&quot;, click button login (completed)" width="1034"/>
+                <img src="18aa7301e064ab35ef8feb111167731249a63d3cf986334d702b2be7e613fb46.png" title=" And an inventory adjustment button click" width="1034"/>
+                <img src="18aa7301e064ab35ef8feb111167731249a63d3cf986334d702b2be7e613fb46.png" title=" Validate page persedian" width="1034"/>
+                <img src="18aa7301e064ab35ef8feb111167731249a63d3cf986334d702b2be7e613fb46.png" title=" Validate page persedian (completed)" width="1034"/>
+                <img src="18aa7301e064ab35ef8feb111167731249a63d3cf986334d702b2be7e613fb46.png" title=" Btn penyesuaian persedian" width="1034"/>
+                <img src="8ac42ccbf4d170f695a6ec3a7855af3bf7dcd69630f93f027d337a978b7aa0b8.png" title=" Btn penyesuaian persedian (completed)" width="1034"/>
+                <img src="8ac42ccbf4d170f695a6ec3a7855af3bf7dcd69630f93f027d337a978b7aa0b8.png" title=" And an inventory adjustment button click (completed)" width="1034"/>
+                <img src="8ac42ccbf4d170f695a6ec3a7855af3bf7dcd69630f93f027d337a978b7aa0b8.png" title=" And validate the inventory adjustment page" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Validate penyesuaian persediaa" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Validate penyesuaian persediaa (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And validate the inventory adjustment page (completed)" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" And click &quot;Gudang Pedia&quot;" width="1034"/>
+                <img src="23224668ac0c5663a6d39ccaa81712d69b7ce022f1e0e6b04dae1dca31370dac.png" title=" Btn lokasi" width="1034"/>
+                <img src="ffb9bfd3daa1394b62066e0e542acd4926d5448f4d8383464000c7cf23161974.png" title=" Btn lokasi (completed)" width="1034"/>
+                <img src="ffb9bfd3daa1394b62066e0e542acd4926d5448f4d8383464000c7cf23161974.png" title=" Btn varisi: Gudang Pedia" width="1034"/>
+                <img src="5a35573fd1f40530d8ec5016190bee7a6c00a0f59a065d39d10edbeb6edbfddc.png" title=" Btn varisi: Gudang Pedia (completed)" width="1034"/>
+                <img src="5a35573fd1f40530d8ec5016190bee7a6c00a0f59a065d39d10edbeb6edbfddc.png" title=" And click &quot;Gudang Pedia&quot; (completed)" width="1034"/>
+                <img src="5a35573fd1f40530d8ec5016190bee7a6c00a0f59a065d39d10edbeb6edbfddc.png" title=" When you select an item" width="1034"/>
+                <img src="5a35573fd1f40530d8ec5016190bee7a6c00a0f59a065d39d10edbeb6edbfddc.png" title=" Btn pilih barang" width="1034"/>
+                <img src="b5a51ca6c55bcc89b6e57d784063ed0443af566ec2f161be9210d6942508a38d.png" title=" Btn pilih barang (completed)" width="1034"/>
+                <img src="b5a51ca6c55bcc89b6e57d784063ed0443af566ec2f161be9210d6942508a38d.png" title=" Btn barang" width="1034"/>
+                <img src="5b4b12662c8bf56a0493dbc1fcb376b4f9d2a099849bc50ef5ff713263812a96.png" title=" Btn barang (completed)" width="1034"/>
+                <img src="5b4b12662c8bf56a0493dbc1fcb376b4f9d2a099849bc50ef5ff713263812a96.png" title=" Btn simpan" width="1034"/>
+                <img src="56fa38b86eccba1a1fd140ee73295ac9d2d3a335be116ea2e6cb6c4e4b8dcee6.png" title=" Btn simpan (completed)" width="1034"/>
+                <img src="56fa38b86eccba1a1fd140ee73295ac9d2d3a335be116ea2e6cb6c4e4b8dcee6.png" title=" When you select an item (completed)" width="1034"/>
+                <img src="56fa38b86eccba1a1fd140ee73295ac9d2d3a335be116ea2e6cb6c4e4b8dcee6.png" title=" Then validate the name &quot;Naruto&quot; successfully" width="1034"/>
+                <img src="a3d416ec113b978a23287f2b4661421c6baf42523d2aefd02dc6dc46b0d0b501.png" title=" Validate page persedian" width="1034"/>
+                <img src="a3d416ec113b978a23287f2b4661421c6baf42523d2aefd02dc6dc46b0d0b501.png" title=" Validate page persedian (completed)" width="1034"/>
+                <img src="3f32a4988384aa9e019d322915bc820e8b45b495b28b9600300e26d6f4077142.png" title=" Field search: Naruto" width="1034"/>
+                <img src="45ade5395667992979dd7c21ca5099bc093a64a04fdd29440300f29231651b27.png" title=" Field search: Naruto (completed)" width="1034"/>
+                <img src="45ade5395667992979dd7c21ca5099bc093a64a04fdd29440300f29231651b27.png" title=" Btn search" width="1034"/>
+                <img src="cbddcdb93eee57239ca858ca448f85289e39250d0a624a2907a99c61325a9d3e.png" title=" Btn search (completed)" width="1034"/>
+                <img src="c55a06da670352572fafebb0385e5b4fad78d10d0b31b2cd1eddff88f91287e5.png" title=" Validate teks barang: Naruto" width="1034"/>
+                <img src="c55a06da670352572fafebb0385e5b4fad78d10d0b31b2cd1eddff88f91287e5.png" title=" Validate teks barang: Naruto (completed)" width="1034"/>
+                <img src="c55a06da670352572fafebb0385e5b4fad78d10d0b31b2cd1eddff88f91287e5.png" title=" Then validate the name &quot;Naruto&quot; successfully (completed)" width="1034"/>
+                <img src="c55a06da670352572fafebb0385e5b4fad78d10d0b31b2cd1eddff88f91287e5.png" title=" 3: Inventory Stock ({name=Naruto, email=qa.rakamin.jubelio@gmail.com, pass=Jubelio123!, lokasi=Gudang Pedia}) (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>

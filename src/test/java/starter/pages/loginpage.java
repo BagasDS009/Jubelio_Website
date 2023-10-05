@@ -61,51 +61,30 @@ public class loginpage extends PageObject {
     public void validatePageHomeOrError(String messagefield) {
         switch (messagefield){
             case "Format Email tidak valid.":
-
-                WebElement element = $(erroemailinvalid());
-                String expectedText = "Format Email tidak valid.";
-                String actualText = element.getText();
-                Assert.assertEquals(actualText, expectedText);
-
-//                $(erroemailinvalid()).getTextValue();
-//                $(emailField()).clear();
-//                $(passField()).clear();
+                Assert.assertEquals($(erroemailinvalid()).getText(), (messagefield));
                 break;
             case "Password atau email anda salah.":
-                $(errorpassinvalid()).getTextValue();
-                Assert.assertEquals($(errorpassinvalid()), (messagefield));
-                $(emailField()).clear();
-                $(passField()).clear();
+                Assert.assertEquals($(errorpassinvalid()).getText(), (messagefield));
                 break;
             case "Email dan Password anda salah.":
-                $(erroemailinvalid()).getTextValue();
-                $(erroemailinvalid()).getTextValue();
-                $(emailField()).clear();
-                $(passField()).clear();
+                Assert.assertEquals($(erroemailinvalid()).getText(), ("Format Email tidak valid."));
+                Assert.assertEquals($(errorpassinvalid()).getText(), ("Password atau email anda salah."));
                 break;
             case "Email dan Password harus diisi.":
-                $(erroremailempty()).getTextValue();
-                $(errorpassempty()).getTextValue();
-                $(emailField()).clear();
-                $(passField()).clear();
+                Assert.assertEquals($(erroremailempty()).getText(), ("Email harus diisi."));
+                Assert.assertEquals($(errorpassempty()).getText(), ("Password harus diisi."));
                 break;
             case "Email harus diisi.":
-                $(erroremailempty()).getTextValue();
-                $(emailField()).clear();
-                $(passField()).clear();
+                Assert.assertEquals($(erroremailempty()).getText(), (messagefield));
                 break;
             case "Password harus diisi.":
-                $(errorpassempty()).getTextValue();
-                $(emailField()).clear();
-                $(passField()).clear();
+                Assert.assertEquals($(errorpassempty()).getText(), (messagefield));
                 break;
             case "Password harus di antara 6 dan 30.":
-                $(errorpassmaxmin()).getTextValue();
-                $(emailField()).clear();
-                $(passField()).clear();
+                Assert.assertEquals($(errorpassmaxmin()).getText(), (messagefield));
                 break;
             default:
-                $(validpagedashbord()).getTextValue();
+                Assert.assertEquals($(validpagedashbord()).getText(), (messagefield));
                 break;
         }
     }
