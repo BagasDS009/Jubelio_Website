@@ -1,7 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.795 s <<< FAILURE! - in CucumberTestSuite
-Login Account at app.jubelio.Login Account  Time elapsed: 14.26 s  <<< FAILURE!
-org.junit.ComparisonFailure: Format Email tidak valid. expected:<Format Email tidak[ valid].> but was:<Format Email tidak[].>
+Tests run: 15, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 194.037 s <<< FAILURE! - in CucumberTestSuite
+Login Account at app.jubelio.Login Account #4  Time elapsed: 8.883 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() = 'Password atau email anda salah.']"}
+  (Session info: chrome=117.0.5938.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-SQP5LMI4', ip: '192.168.100.42', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.134, chrome: {chromedriverVersion: 117.0.5938.88 (be6afae47212..., userDataDir: C:\Users\BAGASD~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64583}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bd2b1a3ffe1e63c1bd87a0ca31e0cee1
+*** Element info: {Using=xpath, value=//*[text() = 'Password atau email anda salah.']}
 

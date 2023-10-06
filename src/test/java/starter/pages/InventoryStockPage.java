@@ -5,8 +5,7 @@ import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
-import javax.swing.*;
+import org.junit.Assert;
 
 public class InventoryStockPage extends PageObject {
     private By teksPersediaan() {
@@ -83,11 +82,11 @@ public class InventoryStockPage extends PageObject {
     }
     @Step
     public void validatePagePersedian() {
-        $(teksPersediaan()).getTextValue();
+        Assert.assertEquals($(teksPersediaan()).getText(), "Persediaan");
     }
     @Step
     public void validatePenyesuaianPersediaa() {
-        $(teksPenyesuaianPersediaan()).getTextValue();
+        Assert.assertEquals($(teksPenyesuaianPersediaan()).getText(), "Penyesuaian Persediaan");
     }
     @Step
     public void btnPenyesuaianPersedian() {
@@ -179,12 +178,12 @@ public class InventoryStockPage extends PageObject {
         $(clickSearch()).click();
     }
     @Step
-    public void validateTeksBarang() {
-        $(teksBarang()).getTextValue();
+    public void validateTeksBarang(String name) {
+        Assert.assertEquals($(teksBarang()).getText(), (name));
     }
     @Step
     public void validatePilihBarang() {
-        $(pilihBarang()).getTextValue();
+        $(pilihBarang()).getText();
     }
     @Step
     public void notifikasiError() {
