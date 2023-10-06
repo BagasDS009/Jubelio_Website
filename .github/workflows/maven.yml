@@ -35,7 +35,7 @@ jobs:
         chmod +x chromedriver
         sudo mv chromedriver /usr/local/bin/
     - name: Build with Maven
-      run: mvn --batch-mode --update-snapshots verify
+      run: mvn install
 
   # Test:
   #   name: Run Dtags="@login"
