@@ -19,7 +19,7 @@ Automation testing with bdd cucumber on website jubelio
 #### next open folder 'site' 
 #### open folder serenity
 ## search file index.html and open with browser
-# Or copy this part 'Jubelio-Website/target/site/serenity/index.html'
+Or copy this part '''Jubelio-Website/target/site/serenity/index.html'''
 
 # Tools
 ### java language
