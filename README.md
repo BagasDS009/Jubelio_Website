@@ -19,13 +19,13 @@ Automation testing with bdd cucumber on website jubelio
 5. search file index.html and open with browser
 6. Or copy this part 
 
-'''
+'''markdown
 Jubelio-Website/target/site/serenity/index.html
 '''
 
 # Tools
-### java language
-### Selenium 
-### Webdriver
-### Jetbrains
-### Maven
+1. java language
+2. Selenium 
+3. Webdriver
+4. Jetbrains
+5. Maven
