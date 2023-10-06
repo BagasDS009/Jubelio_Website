@@ -19,9 +19,9 @@ Automation testing with bdd cucumber on website jubelio
 5. search file index.html and open with browser
 6. Or copy this part 
 
-'''markdown
+```
 Jubelio-Website/target/site/serenity/index.html
-'''
+```
 
 # Tools
 1. java language
