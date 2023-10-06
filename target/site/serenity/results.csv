@@ -1,2 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login Account at app.jubelio","Login Account","FAILURE","2023-10-05T20:22:41.3089286+07:00[Asia/Jakarta]","0.0","13.91"
+"Inventory Stock at app.jubelio","Inventory Stock","SUCCESS","2023-10-06T08:15:37.9627245+07:00[Asia/Jakarta]","0.0","59.16"
+"Inventory Stock at app.jubelio","Inventory Stock - Delete","SUCCESS","2023-10-06T08:16:37.1345875+07:00[Asia/Jakarta]","0.0","51.13"
+"Login Account at app.jubelio","Login Account","ERROR","2023-10-06T08:17:28.2743774+07:00[Asia/Jakarta]","0.0","65.56"

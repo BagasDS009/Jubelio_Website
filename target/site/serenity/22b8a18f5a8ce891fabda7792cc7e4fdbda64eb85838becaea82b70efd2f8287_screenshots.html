@@ -157,7 +157,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-10-2023 20:22</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 06-10-2023 08:17</span>
     <br style="clear:left"/>
 </div>
 
@@ -198,9 +198,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Login Account
+                                <span class="error-color">Login Account
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -227,7 +227,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Assertion error: Format Email tidak valid. expected:(Format Email tidak[ valid].) but was:(Format Email tidak[].)</span>
+                    <span class="error-message error-message-title">No such element exception: no such element: Unable to locate element: {'method':'xpath','selector':'//*[text() = 'Password atau email anda salah.']'}</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -243,11 +243,11 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>java.lang.AssertionError </h4>
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>starter.pages.loginpage.validatePageHomeOrError(loginpage.java:68)<br />starter.stepdefinitios.LoginSteps.validatePageHomeOrError(LoginSteps.java:37)<br />✽.validate page home or error "Format Email tidak valid."(file:///D:/QE/Automation/Jubelio-Website/src/test/resources/features/user/login.feature:8)<br /></pre>
+                        <pre>starter.pages.loginpage.validatePageHomeOrError(loginpage.java:71)<br />starter.stepdefinitios.LoginSteps.validatePageHomeOrError(LoginSteps.java:37)<br />✽.validate page home or error "Email dan Password anda salah."(file:///D:/QE/Automation/Jubelio-Website/src/test/resources/features/user/login.feature:8)<br /></pre>
                     </div>
 
                 </div>
@@ -257,28 +257,180 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource3869263121860251762.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource6813779518749115519.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="58c80844b2ea4034d80e2aff5de3b1312d56b9b4e44ed85411e46b55e72279b8.png" title=" 1: Login Account ({email=qa.rakamin.jubelio@gmail, password=Jubelio123!, message=Format Email tidak valid.})" width="1034"/>
-                <img src="58c80844b2ea4034d80e2aff5de3b1312d56b9b4e44ed85411e46b55e72279b8.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail&quot; with valid data email" width="1034"/>
-                <img src="58c80844b2ea4034d80e2aff5de3b1312d56b9b4e44ed85411e46b55e72279b8.png" title=" Open link" width="1034"/>
-                <img src="58c80844b2ea4034d80e2aff5de3b1312d56b9b4e44ed85411e46b55e72279b8.png" title=" fills in the {string} with valid data email" width="1034"/>
-                <img src="4687901f024a6034311d9530e8e0f8777574b728727f984b62e77db5a7eeeca4.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
-                <img src="4687901f024a6034311d9530e8e0f8777574b728727f984b62e77db5a7eeeca4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail&quot; with valid data email (completed)" width="1034"/>
-                <img src="4687901f024a6034311d9530e8e0f8777574b728727f984b62e77db5a7eeeca4.png" title=" And fill in the &quot;Jubelio123!&quot; with valid data pass" width="1034"/>
-                <img src="7257a034edf29fb7fe90607b982aa26519a2189fa9b75ee3546987a4c217f2f9.png" title=" fill in the {string} with valid data pass" width="1034"/>
-                <img src="b52b7a89c1aa05e689cea0416404fdae30c6f3479a9e941badda155dc9729649.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
-                <img src="b52b7a89c1aa05e689cea0416404fdae30c6f3479a9e941badda155dc9729649.png" title=" And fill in the &quot;Jubelio123!&quot; with valid data pass (completed)" width="1034"/>
-                <img src="b52b7a89c1aa05e689cea0416404fdae30c6f3479a9e941badda155dc9729649.png" title=" When click the login button" width="1034"/>
-                <img src="b52b7a89c1aa05e689cea0416404fdae30c6f3479a9e941badda155dc9729649.png" title=" Clickbtnlogin" width="1034"/>
-                <img src="52d8ec4b0a90f716f3962c6ceb4dac006e46c8314a31a45c92ddd10ee878a23b.png" title=" Clickbtnlogin (completed)" width="1034"/>
-                <img src="3a2dfb7e7ad23caf93a40122103b7c49d82bb03d16e0d51d7e33345684d67ebc.png" title=" When click the login button (completed)" width="1034"/>
-                <img src="3a2dfb7e7ad23caf93a40122103b7c49d82bb03d16e0d51d7e33345684d67ebc.png" title=" Then validate page home or error &quot;Format Email tidak valid.&quot;" width="1034"/>
-                <img src="3a2dfb7e7ad23caf93a40122103b7c49d82bb03d16e0d51d7e33345684d67ebc.png" title=" validate page home or error {string}" width="1034"/>
-                <img src="3a2dfb7e7ad23caf93a40122103b7c49d82bb03d16e0d51d7e33345684d67ebc.png" title=" validate page home or error {string} (completed): <span class='failing-color'>FAILURE</span>" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" 1: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=Jubelio123!, message=Dashboard})" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Open link" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" And fill in the &quot;Jubelio123!&quot; with valid data pass" width="1034"/>
+                <img src="3eaf0a53d429a272f1cbcae9c62772578f202136bd837bf73ee5fddee0931b84.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="8b482962dac6ff10cb5aa9d4988778737162a8eaf06633902634ac40021716b8.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="8b482962dac6ff10cb5aa9d4988778737162a8eaf06633902634ac40021716b8.png" title=" And fill in the &quot;Jubelio123!&quot; with valid data pass (completed)" width="1034"/>
+                <img src="8b482962dac6ff10cb5aa9d4988778737162a8eaf06633902634ac40021716b8.png" title=" When click the login button" width="1034"/>
+                <img src="8b482962dac6ff10cb5aa9d4988778737162a8eaf06633902634ac40021716b8.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="f31823a9badd5593548059369fb7e39c212c45f8eb551bed68f276c5fa0991fe.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="6b3c2678547ba1f03bf283bb6fc6946cb6904491a64f37b1a221a12f5ed03dbe.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="6b3c2678547ba1f03bf283bb6fc6946cb6904491a64f37b1a221a12f5ed03dbe.png" title=" Then validate page home or error &quot;Dashboard&quot;" width="1034"/>
+                <img src="6b3c2678547ba1f03bf283bb6fc6946cb6904491a64f37b1a221a12f5ed03dbe.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="34666256664eb4630e4af5b5d0dba0692a860292b369ccd1608a47b062752b94.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="34666256664eb4630e4af5b5d0dba0692a860292b369ccd1608a47b062752b94.png" title=" Then validate page home or error &quot;Dashboard&quot; (completed)" width="1034"/>
+                <img src="34666256664eb4630e4af5b5d0dba0692a860292b369ccd1608a47b062752b94.png" title=" 1: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=Jubelio123!, message=Dashboard}) (completed)" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" 2: Login Account ({email=qa.rakamin.jubelio@gmail, password=Jubelio123!, message=Format Email tidak valid.})" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail&quot; with valid data email" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Open link" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="53aa409ff0fe0f29d78dc4e2ae24b7fa8e8aedefcbf9682a0733dd30c1cca555.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="53aa409ff0fe0f29d78dc4e2ae24b7fa8e8aedefcbf9682a0733dd30c1cca555.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail&quot; with valid data email (completed)" width="1034"/>
+                <img src="53aa409ff0fe0f29d78dc4e2ae24b7fa8e8aedefcbf9682a0733dd30c1cca555.png" title=" And fill in the &quot;Jubelio123!&quot; with valid data pass" width="1034"/>
+                <img src="c4f0704577733de09401d10b7d86c2a1aa6298d6445f9b4f27418749a57b9dc2.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="d5e5d19ebd741e745376cffbae8b8d14a9ff7e3ecc661b505e59846a45982218.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="d5e5d19ebd741e745376cffbae8b8d14a9ff7e3ecc661b505e59846a45982218.png" title=" And fill in the &quot;Jubelio123!&quot; with valid data pass (completed)" width="1034"/>
+                <img src="d5e5d19ebd741e745376cffbae8b8d14a9ff7e3ecc661b505e59846a45982218.png" title=" When click the login button" width="1034"/>
+                <img src="d5e5d19ebd741e745376cffbae8b8d14a9ff7e3ecc661b505e59846a45982218.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="24698352dc0142c8d7347541259ff13153ef0fb34152155a05cdc2e6e6630632.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="d9638233b8b48ef947f7452529efba35be66403dd90f632d7b33f1ac21ade830.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="d9638233b8b48ef947f7452529efba35be66403dd90f632d7b33f1ac21ade830.png" title=" Then validate page home or error &quot;Format Email tidak valid.&quot;" width="1034"/>
+                <img src="d9638233b8b48ef947f7452529efba35be66403dd90f632d7b33f1ac21ade830.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="d9638233b8b48ef947f7452529efba35be66403dd90f632d7b33f1ac21ade830.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="d9638233b8b48ef947f7452529efba35be66403dd90f632d7b33f1ac21ade830.png" title=" Then validate page home or error &quot;Format Email tidak valid.&quot; (completed)" width="1034"/>
+                <img src="d9638233b8b48ef947f7452529efba35be66403dd90f632d7b33f1ac21ade830.png" title=" 2: Login Account ({email=qa.rakamin.jubelio@gmail, password=Jubelio123!, message=Format Email tidak valid.}) (completed)" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" 3: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=Jubelio123, message=Password atau email anda salah.})" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Open link" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" And fill in the &quot;Jubelio123&quot; with valid data pass" width="1034"/>
+                <img src="3eaf0a53d429a272f1cbcae9c62772578f202136bd837bf73ee5fddee0931b84.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="509da694a76e30105fe5913cf66eae1824b8da9133e595c130ff523e4c2ae220.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="509da694a76e30105fe5913cf66eae1824b8da9133e595c130ff523e4c2ae220.png" title=" And fill in the &quot;Jubelio123&quot; with valid data pass (completed)" width="1034"/>
+                <img src="509da694a76e30105fe5913cf66eae1824b8da9133e595c130ff523e4c2ae220.png" title=" When click the login button" width="1034"/>
+                <img src="509da694a76e30105fe5913cf66eae1824b8da9133e595c130ff523e4c2ae220.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="4590352238c256247aff7ddcd727e17f12a7dc2f6f0ddb1023b8f1e3d37af64e.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="538c155a99a818c6a5f314fcc91b5a350debdf6b221df03d49cb77055de9ff1d.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="538c155a99a818c6a5f314fcc91b5a350debdf6b221df03d49cb77055de9ff1d.png" title=" Then validate page home or error &quot;Password atau email anda salah.&quot;" width="1034"/>
+                <img src="538c155a99a818c6a5f314fcc91b5a350debdf6b221df03d49cb77055de9ff1d.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="538c155a99a818c6a5f314fcc91b5a350debdf6b221df03d49cb77055de9ff1d.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="538c155a99a818c6a5f314fcc91b5a350debdf6b221df03d49cb77055de9ff1d.png" title=" Then validate page home or error &quot;Password atau email anda salah.&quot; (completed)" width="1034"/>
+                <img src="538c155a99a818c6a5f314fcc91b5a350debdf6b221df03d49cb77055de9ff1d.png" title=" 3: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=Jubelio123, message=Password atau email anda salah.}) (completed)" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" 4: Login Account ({email=qa.rakamin.jubelio@gmail, password=Jubelio123, message=Email dan Password anda salah.})" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail&quot; with valid data email" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Open link" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="53aa409ff0fe0f29d78dc4e2ae24b7fa8e8aedefcbf9682a0733dd30c1cca555.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="53aa409ff0fe0f29d78dc4e2ae24b7fa8e8aedefcbf9682a0733dd30c1cca555.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail&quot; with valid data email (completed)" width="1034"/>
+                <img src="53aa409ff0fe0f29d78dc4e2ae24b7fa8e8aedefcbf9682a0733dd30c1cca555.png" title=" And fill in the &quot;Jubelio123&quot; with valid data pass" width="1034"/>
+                <img src="c4f0704577733de09401d10b7d86c2a1aa6298d6445f9b4f27418749a57b9dc2.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="f7c6ef932f71c961d2475d2cef6dbea8aa676bebe6ae276426a773c51e424c85.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="f7c6ef932f71c961d2475d2cef6dbea8aa676bebe6ae276426a773c51e424c85.png" title=" And fill in the &quot;Jubelio123&quot; with valid data pass (completed)" width="1034"/>
+                <img src="f7c6ef932f71c961d2475d2cef6dbea8aa676bebe6ae276426a773c51e424c85.png" title=" When click the login button" width="1034"/>
+                <img src="f7c6ef932f71c961d2475d2cef6dbea8aa676bebe6ae276426a773c51e424c85.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="c82fa643e5a9b4e98367b332a79c27b69ab63c811364a3775703f24a899d83e7.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="48b3885b0ecbde194f05f4bb1d6f4c3ff3a537575a38660f9bd0c24951ef9c7c.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="48b3885b0ecbde194f05f4bb1d6f4c3ff3a537575a38660f9bd0c24951ef9c7c.png" title=" Then validate page home or error &quot;Email dan Password anda salah.&quot;" width="1034"/>
+                <img src="48b3885b0ecbde194f05f4bb1d6f4c3ff3a537575a38660f9bd0c24951ef9c7c.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="48b3885b0ecbde194f05f4bb1d6f4c3ff3a537575a38660f9bd0c24951ef9c7c.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" 5: Login Account ({email=, password=, message=Email dan Password harus diisi.})" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Given fills in the &quot;&quot; with valid data email" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Open link" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Given fills in the &quot;&quot; with valid data email (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" And fill in the &quot;&quot; with valid data pass" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="dd8265f9259b9d92ed5bc81b0db29439ec1a265d87a746ae84a6152f7eb065a9.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="dd8265f9259b9d92ed5bc81b0db29439ec1a265d87a746ae84a6152f7eb065a9.png" title=" And fill in the &quot;&quot; with valid data pass (completed)" width="1034"/>
+                <img src="dd8265f9259b9d92ed5bc81b0db29439ec1a265d87a746ae84a6152f7eb065a9.png" title=" When click the login button" width="1034"/>
+                <img src="dd8265f9259b9d92ed5bc81b0db29439ec1a265d87a746ae84a6152f7eb065a9.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="f19e7a2146521dceb1f3f22f04eaebd3fd14abea56606f075431bd336a6b740c.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="8c9d288adb69990d14523e4c39d41ed726f1153208960fe00fb61daa575f592d.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="8c9d288adb69990d14523e4c39d41ed726f1153208960fe00fb61daa575f592d.png" title=" Then validate page home or error &quot;Email dan Password harus diisi.&quot;" width="1034"/>
+                <img src="8c9d288adb69990d14523e4c39d41ed726f1153208960fe00fb61daa575f592d.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="8c9d288adb69990d14523e4c39d41ed726f1153208960fe00fb61daa575f592d.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="8c9d288adb69990d14523e4c39d41ed726f1153208960fe00fb61daa575f592d.png" title=" Then validate page home or error &quot;Email dan Password harus diisi.&quot; (completed)" width="1034"/>
+                <img src="8c9d288adb69990d14523e4c39d41ed726f1153208960fe00fb61daa575f592d.png" title=" 5: Login Account ({email=, password=, message=Email dan Password harus diisi.}) (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" 6: Login Account ({email=, password=Jubelio123, message=Email harus diisi.})" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Given fills in the &quot;&quot; with valid data email" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Open link" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Given fills in the &quot;&quot; with valid data email (completed)" width="1034"/>
+                <img src="f97538ddc3be05bb45164a0826cf793975e889e421bf4548eb5f6c521b11c3ba.png" title=" And fill in the &quot;Jubelio123&quot; with valid data pass" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="0b723242fdccdf285b0d3a3647047b8a9434fd5ba74a38ae28e5629fce967cc6.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="0b723242fdccdf285b0d3a3647047b8a9434fd5ba74a38ae28e5629fce967cc6.png" title=" And fill in the &quot;Jubelio123&quot; with valid data pass (completed)" width="1034"/>
+                <img src="0b723242fdccdf285b0d3a3647047b8a9434fd5ba74a38ae28e5629fce967cc6.png" title=" When click the login button" width="1034"/>
+                <img src="0b723242fdccdf285b0d3a3647047b8a9434fd5ba74a38ae28e5629fce967cc6.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="e147b4c102087fb6de4d29c2861d6181ae6cafeddaa7dd22799cd75bc65b9f40.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="a2e3afce0e77b5408d6b3c522ceee08ec0826e34fb4ab788a98411951c08b8b4.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="a2e3afce0e77b5408d6b3c522ceee08ec0826e34fb4ab788a98411951c08b8b4.png" title=" Then validate page home or error &quot;Email harus diisi.&quot;" width="1034"/>
+                <img src="a2e3afce0e77b5408d6b3c522ceee08ec0826e34fb4ab788a98411951c08b8b4.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="a2e3afce0e77b5408d6b3c522ceee08ec0826e34fb4ab788a98411951c08b8b4.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="a2e3afce0e77b5408d6b3c522ceee08ec0826e34fb4ab788a98411951c08b8b4.png" title=" Then validate page home or error &quot;Email harus diisi.&quot; (completed)" width="1034"/>
+                <img src="a2e3afce0e77b5408d6b3c522ceee08ec0826e34fb4ab788a98411951c08b8b4.png" title=" 6: Login Account ({email=, password=Jubelio123, message=Email harus diisi.}) (completed)" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" 7: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=, message=Password harus diisi.})" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Open link" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" And fill in the &quot;&quot; with valid data pass" width="1034"/>
+                <img src="3eaf0a53d429a272f1cbcae9c62772578f202136bd837bf73ee5fddee0931b84.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="2cf30185dfdbac732dd1dde67140c2dbaae0416a90e4410d7d7f2e674b868af1.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="2cf30185dfdbac732dd1dde67140c2dbaae0416a90e4410d7d7f2e674b868af1.png" title=" And fill in the &quot;&quot; with valid data pass (completed)" width="1034"/>
+                <img src="2cf30185dfdbac732dd1dde67140c2dbaae0416a90e4410d7d7f2e674b868af1.png" title=" When click the login button" width="1034"/>
+                <img src="2cf30185dfdbac732dd1dde67140c2dbaae0416a90e4410d7d7f2e674b868af1.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="51857ecb9ee7ad2bc461e77f38eb568966ded89aad5ce75c494455128fd42371.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="cd4dae23421b104040f639b55bd9916ddd455749d76b0dbc0056fc888879b43d.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="cd4dae23421b104040f639b55bd9916ddd455749d76b0dbc0056fc888879b43d.png" title=" Then validate page home or error &quot;Password harus diisi.&quot;" width="1034"/>
+                <img src="cd4dae23421b104040f639b55bd9916ddd455749d76b0dbc0056fc888879b43d.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="cd4dae23421b104040f639b55bd9916ddd455749d76b0dbc0056fc888879b43d.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="cd4dae23421b104040f639b55bd9916ddd455749d76b0dbc0056fc888879b43d.png" title=" Then validate page home or error &quot;Password harus diisi.&quot; (completed)" width="1034"/>
+                <img src="cd4dae23421b104040f639b55bd9916ddd455749d76b0dbc0056fc888879b43d.png" title=" 7: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=, message=Password harus diisi.}) (completed)" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" 8: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=Ju, message=Password harus di antara 6 dan 30.})" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" Open link" width="1034"/>
+                <img src="4cc97b387fb82cfc136ff103deed3ff15904afea0e81e8a8130786ef5a9430f4.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email (completed)" width="1034"/>
+                <img src="29d3e9f166cf597135c97994c9ce45464a7cb63e7c1b11511a227ba5e21a0a13.png" title=" And fill in the &quot;Ju&quot; with valid data pass" width="1034"/>
+                <img src="3eaf0a53d429a272f1cbcae9c62772578f202136bd837bf73ee5fddee0931b84.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="3715a8613cdfdb30bd411042fff0f3adbf4b7946f6e90e4e1b0ebd5ceaf98194.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="3715a8613cdfdb30bd411042fff0f3adbf4b7946f6e90e4e1b0ebd5ceaf98194.png" title=" And fill in the &quot;Ju&quot; with valid data pass (completed)" width="1034"/>
+                <img src="3715a8613cdfdb30bd411042fff0f3adbf4b7946f6e90e4e1b0ebd5ceaf98194.png" title=" When click the login button" width="1034"/>
+                <img src="3715a8613cdfdb30bd411042fff0f3adbf4b7946f6e90e4e1b0ebd5ceaf98194.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="cb02411de932d205060b5e56458e67ce4178c67462668aba1621b2d6d6080fca.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="8ff485f701d69700ea5030075bc082e9e1570297ecab6eaf3b4df03c4d0640aa.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="8ff485f701d69700ea5030075bc082e9e1570297ecab6eaf3b4df03c4d0640aa.png" title=" Then validate page home or error &quot;Password harus di antara 6 dan 30.&quot;" width="1034"/>
+                <img src="8ff485f701d69700ea5030075bc082e9e1570297ecab6eaf3b4df03c4d0640aa.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="8ff485f701d69700ea5030075bc082e9e1570297ecab6eaf3b4df03c4d0640aa.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="8ff485f701d69700ea5030075bc082e9e1570297ecab6eaf3b4df03c4d0640aa.png" title=" Then validate page home or error &quot;Password harus di antara 6 dan 30.&quot; (completed)" width="1034"/>
+                <img src="8ff485f701d69700ea5030075bc082e9e1570297ecab6eaf3b4df03c4d0640aa.png" title=" 8: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=Ju, message=Password harus di antara 6 dan 30.}) (completed)" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" 9: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=1234567890123456789012345678901, message=Password harus di antara 6 dan 30.})" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" Open link" width="1034"/>
+                <img src="3038817d7525da4800fd8186255ce5e4cf68991618dfa75c3b583a90d9f85639.png" title=" fills in the {string} with valid data email" width="1034"/>
+                <img src="02cb3251a2c30973c12b10e8084828a02f3abc0c297b24f7b7c3631066f5dea2.png" title=" fills in the {string} with valid data email (completed)" width="1034"/>
+                <img src="02cb3251a2c30973c12b10e8084828a02f3abc0c297b24f7b7c3631066f5dea2.png" title=" Given fills in the &quot;qa.rakamin.jubelio@gmail.com&quot; with valid data email (completed)" width="1034"/>
+                <img src="02cb3251a2c30973c12b10e8084828a02f3abc0c297b24f7b7c3631066f5dea2.png" title=" And fill in the &quot;1234567890123456789012345678901&quot; with valid data pass" width="1034"/>
+                <img src="09b09d2e8c06e6ad905ab8c33f66254ac7c1b6f558a2fa7e4cfea90a8870c49b.png" title=" fill in the {string} with valid data pass" width="1034"/>
+                <img src="28c2d9983f6aed9b57fea4029bb0cd52a97a95bd8dc86d9b87c39d140c2b1d03.png" title=" fill in the {string} with valid data pass (completed)" width="1034"/>
+                <img src="28c2d9983f6aed9b57fea4029bb0cd52a97a95bd8dc86d9b87c39d140c2b1d03.png" title=" And fill in the &quot;1234567890123456789012345678901&quot; with valid data pass (completed)" width="1034"/>
+                <img src="28c2d9983f6aed9b57fea4029bb0cd52a97a95bd8dc86d9b87c39d140c2b1d03.png" title=" When click the login button" width="1034"/>
+                <img src="28c2d9983f6aed9b57fea4029bb0cd52a97a95bd8dc86d9b87c39d140c2b1d03.png" title=" Clickbtnlogin" width="1034"/>
+                <img src="21297ad804f120efd5285b3f363cbe9f787c37a9cc7dfc133097368ed3883b2d.png" title=" Clickbtnlogin (completed)" width="1034"/>
+                <img src="91fbcc46db797b6a00f2f406d6566344b85e3a97fea72e376f49b30ddad8768d.png" title=" When click the login button (completed)" width="1034"/>
+                <img src="91fbcc46db797b6a00f2f406d6566344b85e3a97fea72e376f49b30ddad8768d.png" title=" Then validate page home or error &quot;Password harus di antara 6 dan 30.&quot;" width="1034"/>
+                <img src="91fbcc46db797b6a00f2f406d6566344b85e3a97fea72e376f49b30ddad8768d.png" title=" validate page home or error {string}" width="1034"/>
+                <img src="91fbcc46db797b6a00f2f406d6566344b85e3a97fea72e376f49b30ddad8768d.png" title=" validate page home or error {string} (completed)" width="1034"/>
+                <img src="91fbcc46db797b6a00f2f406d6566344b85e3a97fea72e376f49b30ddad8768d.png" title=" Then validate page home or error &quot;Password harus di antara 6 dan 30.&quot; (completed)" width="1034"/>
+                <img src="91fbcc46db797b6a00f2f406d6566344b85e3a97fea72e376f49b30ddad8768d.png" title=" 9: Login Account ({email=qa.rakamin.jubelio@gmail.com, password=1234567890123456789012345678901, message=Password harus di antara 6 dan 30.}) (completed): <span class='error-color'>ERROR</span>" width="1034"/>
             </div>
         </div>
 
