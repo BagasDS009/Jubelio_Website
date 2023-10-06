@@ -9,7 +9,11 @@ Automation testing with bdd cucumber on website jubelio
 2. extract file Jubelio_Website
 3. Open vsc
 4. Open terminal 
-5. Run test with Commands **mvn clean verify**
+5. Run test with Commands 
+
+```
+mvn clean verify
+```
 
 **See History Testing**
 1. After extract file Jubelio_Website
